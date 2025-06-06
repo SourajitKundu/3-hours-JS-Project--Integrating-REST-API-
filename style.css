@@ -1,0 +1,50 @@
+@property --ani-glow-deg {
+  syntax: "<angle>";
+  inherits: true;
+  initial-value: -90deg;
+}
+body {
+  background: linear-gradient(135deg, #fceabb, #e8f0fe, #d1f4f9);
+}
+
+.notelist {
+  width: max-content;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(3, 450px);
+  gap: 20px;
+  list-style-type: none;
+}
+
+.notelist li {
+  --ani-glow: red, orange, yellow, green, blue, indigo, violet, red;
+  padding: 2rem;
+
+  border: 3px solid transparent;
+  background: linear-gradient(white 0 0) padding-box,
+    conic-gradient(from var(--ani-glow-deg), var(--ani-glow)) border-box;
+
+  animation: glow 5s infinite linear;
+}
+
+@keyframes glow {
+  100% {
+    --ani-glow-deg: 270deg;
+  }
+}
+
+.top-section {
+  text-align: center;
+}
+
+.totalform {
+  width: max-content;
+  margin: 0 auto;
+  padding: 5em;
+  background: transparent;
+  border-radius: 1rem;
+  border: 1px solid grey;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px #00000033;
+}

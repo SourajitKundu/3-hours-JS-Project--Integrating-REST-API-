@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="top-section">
+      <h1>NoteBook</h1>
+      <h5 id="counting">Total Notes :</h5>
+
+      <form onsubmit="handleFormSubmit(event)" class="totalform">
+        <label for="note-title">Note Title</label><br />
+        <input type="text" id="notetitle" name="note-title" /><br />
+        <label for="note-desc">Note Description</label><br />
+        <textarea id="notedesc" name="note-desc" cols="20" rows="5"></textarea
+        ><br />
+        <button type="submit">Submit</button>
+      </form>
+
+      <ul class="notelist"></ul>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.5.1/axios.min.js"></script>
+  <script src="index.js"></script>
+</html>
