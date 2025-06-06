@@ -48,3 +48,15 @@ body {
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 8px 32px #00000033;
 }
+
+#searchbar {
+  padding: 0.5rem 1rem;
+  width: 60%;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+.search-container {
+  margin-bottom: 2em;
+}

@@ -61,4 +61,14 @@ window.addEventListener("DOMContentLoaded", function () {
     .catch((err) => console.log("err"));
 });
 
+document.getElementById("searchbar").addEventListener("input", function (e) {
+  const query = e.target.value.toLowerCase();
+  const notes = document.querySelectorAll(".notelist li");
+
+  notes.forEach((note) => {
+    const text = note.querySelector("h2").textContent.toLowerCase();
+    note.style.display = text.includes(query) ? "block" : "none";
+  });
+});
+
 module.exports = handleFormSubmit;
